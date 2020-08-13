@@ -1,0 +1,2 @@
+#1st solution
+requirements.txt ---> django dependency missing, add Django==2.0.8
