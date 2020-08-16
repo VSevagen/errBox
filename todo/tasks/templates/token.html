@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% load tags %}
+{% load static %}
+
+{% block content %}
+    <div class="container text-center">
+        <div class="row text-center">
+            <div class="col">
+                <img src="{% static 'images/source.gif' %}" style="height: 300px; " alt="bolebole">
+            </div>
+        </div>
+        <div class="row text-center">
+            <div class="col">
+                <div style="padding-top: 50px;">
+                    <p>Password has been generated and stored in <strong>password.txt.</strong></p>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
