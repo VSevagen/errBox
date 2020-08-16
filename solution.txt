@@ -1,2 +1,3 @@
 #1st solution
-requirements.txt ---> django dependency missing, add Django==2.0.8
+requirements.txt ---> django dependency missing, add Django==2.2
+                 ---> django rest framework missing, djangorestframework==3.11.1
