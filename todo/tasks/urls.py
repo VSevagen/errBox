@@ -19,4 +19,5 @@ from . import views
 urlpatterns = [
     path('token/', views.token, name='get_token'),
     path('', views.tasks, name='tasks'),
+    path('songs/', views.ListSongsView.as_view(), name="songs-all")
 ]
