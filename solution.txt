@@ -5,3 +5,10 @@ requirements.txt ---> django dependency missing, add Django==2.2
 #2nd solution
 serializers.py ---> The `fields` option must be a list or tuple or "__all__". Got str, add comma to make single element tuple
                ---> Missing artists attribute, add "artist" to fields
+#3
+template not loading
+load static missing
+
+mogrartations not working
+C caps instead of small
+
