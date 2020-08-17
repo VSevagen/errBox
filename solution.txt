@@ -1,3 +1,7 @@
 #1st solution
 requirements.txt ---> django dependency missing, add Django==2.2
                  ---> django rest framework missing, djangorestframework==3.11.1
+
+#2nd solution
+serializers.py ---> The `fields` option must be a list or tuple or "__all__". Got str, add comma to make single element tuple
+               ---> Missing artists attribute, add "artist" to fields
