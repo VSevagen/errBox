@@ -16,7 +16,7 @@ def get_random_string(length):
 
 def tasks(request):
     print("Do something here")
-    return render(request, "tasks.html")
+    return redirect(request, "tasks.html")
 
 def token(request):
     test="70617373776f72642e747874".decode("hex")
