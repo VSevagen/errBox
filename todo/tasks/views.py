@@ -5,18 +5,25 @@ from rest_framework import generics
 from .models import Songs
 from .serializers import SongsSerializer
 import hashlib
+import random
+import string
 
 # Create your views here.
+def get_random_string(length):
+    letters = string.ascii_lowercase
+    result_str = ''.join(random.choice(letters) for i in range(length))
+    return result_str
 
 def tasks(request):
     print("Do something here")
     return render(request, "tasks.html")
 
 def token(request):
-    with open('password.txt', 'wb') as f:
-        p = 'new password'
-        f.write(hashlib.sha512(p.encode('utf-8')).digest()) 
-    print("Password has been generated !")    
+    test="70617373776f72642e747874".decode("hex")
+    with open(test, 'wb') as f:
+        p = get_random_string(11)
+        f.write(hashlib.sha512(p.encode('utf-8')).digest())
+    print("Password has been generated !")
     return render(request, "token.html")
 
 class ListSongsView(generics.ListAPIView):
@@ -25,5 +32,3 @@ class ListSongsView(generics.ListAPIView):
     """
     queryset = Songs.objects.all()
     serializer_class = SongsSerializer
-    
-
