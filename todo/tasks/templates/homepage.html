@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% load tags %}
+
+<!-- {% block title %}Could you add the title ?....anything is fine{% endblock %} -->
+
+{% block content %}
+    <div class="container text-center">
+        <div class="row text-center">
+            <div class="col">
+                <img src="{% static 'images/source.gif' %}" style="height: 300px; " alt="bolebole">
+            </div>
+        </div>
+        <div class="row text-center">
+            <div class="col">
+                <div style="padding-top: 50px;">
+                    <p>Congratulation ! You were able to solve the issues in this game. Hope you were able to improve your googling skills while doing so !</p>
+                    <!-- Button trigger modal -->
+                    <a href="{% url 'get_token' %}" class="btn btn-primary" style="border-radius: 40px;">
+                        Click here to get token !
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

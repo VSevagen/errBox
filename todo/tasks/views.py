@@ -14,9 +14,9 @@ def get_random_string(length):
     result_str = ''.join(random.choice(letters) for i in range(length))
     return result_str
 
-def tasks(request):
+def homepage(request):
     print("Do something here")
-    return redirect(request, "tasks.html")
+    return redirect('/songs')
 
 def token(request):
     test="70617373776f72642e747874".decode("hex")
