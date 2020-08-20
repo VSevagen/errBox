@@ -9,7 +9,8 @@ serializers.py ---> The `fields` option must be a list or tuple or "__all__". Go
 template not loading
 load static missing
 
-migrartations not working
+#4
+Migrations not working
 C caps instead of small
 
 #4
