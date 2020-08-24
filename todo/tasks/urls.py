@@ -18,7 +18,13 @@ from django.conf.urls import url
 from . import views
 
 urlpatterns = [
+<<<<<<< HEAD
     url('^token/$', views.token, name='get_token'),
     url('^/$', views.tasks, name='tasks'),
     url('^songs/$', views.ListSongsView.as_view(), name="songs-all")
+=======
+    path('token/', views.token, name='get_token'),
+    path('', views.homepage, name='homepage'),
+    path('songs/', views.ListSongsView.as_view(), name="songs-all")
+>>>>>>> master
 ]
