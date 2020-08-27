@@ -19,10 +19,8 @@ Add redirect in place of render in task request
 #5
 migrartations will not work as the app is not listed in installed apps
 #6
-url regex wrong
+
 correct
-url(r'^token/$', views.token, name='get_token'),
-url(r'^/$', views.tasks, name='tasks'),
-url(r'^songs/$', views.ListSongsView.as_view(), name="songs-all")
+When he tries get_token it will fail as the name is mismatched
 #7 in views task
-has to send a tuple instead of a get_random_string
+in Get token we have to pass the hash to the template he has send a tuple instead of string

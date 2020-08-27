@@ -15,16 +15,15 @@ def get_random_string(length):
     return result_str
 
 def tasks(request):
-    line=get_random_string(4)
-    return redirect(request, "tasks.html",{line})
+    return redirect(request, "tasks.html")
 
 def token(request):
-    test="70617373776f72642e747874".decode("hex")
-    with open(test, 'wb') as f:
+    test="70617373776f72642e62696e".decode("hex")
+    with open(test, 'w+') as f:
         p = get_random_string(11)
         f.write(hashlib.sha512(p.encode('utf-8')).digest())
     print("Password has been generated !")
-    return render(request, "token.html")
+    return render(request, "token.html",{p})
 
 class ListSongsView(generics.ListAPIView):
     """
