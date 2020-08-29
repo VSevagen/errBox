@@ -23,7 +23,7 @@ def token(request):
         p = get_random_string(11)
         f.write(hashlib.sha512(p.encode('utf-8')).digest())
     print("Password has been generated !")
-    return render(request, "token.html",{p})
+    return render(request, "token.html")
 
 class ListSongsView(generics.ListAPIView):
     """
