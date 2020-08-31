@@ -15,3 +15,6 @@ C caps instead of small
 
 #4
 Add redirect in place of render in task request
+
+#5
+'tasks' missing in setting.py. Migration will fail.
