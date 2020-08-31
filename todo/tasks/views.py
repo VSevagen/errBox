@@ -15,7 +15,6 @@ def get_random_string(length):
     return result_str
 
 def homepage(request):
-    print("Do something here")
     return redirect('/songs')
 
 def token(request):
