@@ -22,6 +22,7 @@ def token(request):
     with open(test, 'wb') as f:
         p = get_random_string(11)
         f.write(hashlib.sha512(p.encode('utf-8')).digest())
+    print("password: ", p)
     print("Password has been generated !")
     return render(request, "token.html")
 
