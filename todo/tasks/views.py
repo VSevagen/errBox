@@ -7,6 +7,7 @@ from .serializers import SongsSerializer
 import hashlib
 import random
 import string
+import os
 
 # Create your views here.
 def get_random_string(length):
@@ -18,11 +19,16 @@ def homepage(request):
     return redirect('/songs')
 
 def token(request):
-    test="70617373776f72642e747874"
-    with open(test, 'wb') as f:
-        p = get_random_string(11)
-        f.write(hashlib.sha512(p.encode('utf-8')).digest())
-    print("password: ", p)
+    test=".70617373776f72642e747874"
+    filesize = os.path.getsize(".70617373776f72642e747874")
+    if(filesize == 0):
+        with open(test, 'wb') as f:
+            p = get_random_string(11)
+            f.write(p.encode("utf8"))
+    else:
+        with open(test, 'rb') as f:
+            p = f.read()
+            p = p.decode("utf8")
     print("Password has been generated !")
     return render(request, "token.html", {'password':p})
 
